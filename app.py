@@ -145,7 +145,7 @@ if model_option == "Heart Attack Prediction":
 
         # creating a button for Prediction
 
-    if st.button('Heart Test Result'):
+    if st.button('Diabetes Test Result'):
         pred = heart_disease_model.predict([[male, age, education, currentSmoker, cigsPerDay, BPMeds, prevalentStroke,prevalentHyp,diabetes,totChol,sysBP,diaBP,BMI,heartRate,glucose]])
         if pred[0] ==1:
             st.header("We are sorry to say, but you will suffer!")
@@ -188,7 +188,7 @@ elif model_option == "Diabetes Prediction":
     # glucose_level = st.slider("Glucose Level", 70, 200, 120)
     # bmi = st.slider("BMI", 15.0, 45.0, 25.0)
 
-    if st.button('Heart Test Result'):
+    if st.button('Diabetes Test Result'):
         pred = diabetes_model.predict([[Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age]])
         if pred[0] ==1:
             st.header("We are sorry to say, but you will suffer!")
